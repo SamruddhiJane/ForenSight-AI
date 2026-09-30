@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import os
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
+CORS(app)
 
 # Folder where uploaded files will be stored
 UPLOAD_FOLDER = os.path.join(os.path.dirname(__file__), "uploads")
